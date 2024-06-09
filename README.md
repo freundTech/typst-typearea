@@ -36,7 +36,21 @@ The top and bottom margin will always be one and two parts respectively. In two-
 
 In one-sided mode the left and right margin will take 1.5 parts each.
 
+### header-height / footer-height
+
+The height of the page header/footer.
+
+### header-sep / footer-sep
+
+The distance between the page header/footer and the text area
+
+### header-include / footer-include
+
+Whether the header/footer should be counted as part of the text area when calculating the margins. Defaults to `false`
+
 ### ..rest
 
 All other arguments are passed on to `page()` as is. You can see which arguments `page()` accepts in the [typst reference for the page function](https://typst.app/docs/reference/layout/page/).
+
+You should prefer this over calling or setting `page()` directly as doing so could break some of `typearea`'s functionality.
 
