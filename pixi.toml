@@ -1,0 +1,21 @@
+[project]
+name = "typst-typearea"
+version = "0.1.0"
+description = "Add a short description here"
+channels = ["conda-forge"]
+platforms = ["linux-64", "win-64", "osx-64", "osx-arm64"]
+
+[tasks]
+
+[dependencies]
+typst = ">=0.11.1,<0.12"
+
+[feature.test.dependencies]
+pytest = ">=8.2.2,<8.3"
+
+[feature.test.tasks]
+test = "pytest"
+
+[environments]
+test = ["test"]
+
