@@ -3,12 +3,12 @@
 A KOMA-Script inspired package to better configure your typearea and margins.
 
 ```typst
-#import "@preview/typearea:0.1.0": typearea
+#import "@preview/typearea:0.2.0": typearea
 
 #show: typearea.with(
   paper: "a4",
   div: 9,
-  bcor: 11mm,
+  binding-correction: 11mm,
 )
 
 = Hello World
@@ -22,11 +22,13 @@ A KOMA-Script inspired package to better configure your typearea and margins.
 
 Whether the document is two-sided. Defaults to `true`.
 
-### bcor
+### binding-correction
 
 Binding correction. Defaults to `0pt`. 
 
 Additional margin on the inside of a page when two-sided is true. If two-sided is false it will be on the left or right side, depending on the value of `binding`. A `binding` value of `auto` will currently default to `left`.
+
+Note: Before version 0.2.0 this was called `bcor`.
 
 ### div
 
@@ -42,11 +44,11 @@ The height of the page header/footer.
 
 ### header-sep / footer-sep
 
-The distance between the page header/footer and the text area
+The distance between the page header/footer and the text area.
 
 ### header-include / footer-include
 
-Whether the header/footer should be counted as part of the text area when calculating the margins. Defaults to `false`
+Whether the header/footer should be counted as part of the text area when calculating the margins. Defaults to `false`.
 
 ### ..rest
 
